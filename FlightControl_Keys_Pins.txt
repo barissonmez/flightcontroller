@@ -1,0 +1,79 @@
+-------------------------------------------------------------------------------
+
+-FD(B)
+--Turn flight director ON/OFF
+
+-CRS(RE)
+--Re-Center => KEY_LEFT_SHIFT + KEY_LEFT_CTRL + KEY_F7(SET VOR1)
+--Adjust selected course to the RIGHT/LEFT => KEY_LEFT_SHIFT + KEY_LEFT_CTRL + KEY_F7(DECREASE VOR1 OBS) / => KEY_LEFT_SHIFT + KEY_LEFT_CTRL + KEY_F8(INCREASE VOR1 OBS)
+---PINS
+----CLK:A0
+----DT:A1
+----SW:A2
+
+-------------------------------------------------------------------------------
+
+-VS(RE)
+--Turn vertical speed mode ON/OFF => KEY_LEFT_SHIFT + KEY_LEFT_CTRL + KEY_F2(TOGGLE AUTOPILOT VS HOLD)
+--Increase/Decrease vertical speed => KEY_LEFT_CTRL + KEY_HOME(INCREASE AUTOPILOT REFERENCE VS) / => KEY_LEFT_CTRL + KEY_END(DECREASE AUTOPILOT REFERENCE VS)
+---PINS
+----CLK:5
+----DT:6
+----SW:7
+
+-VNAV(B)
+--Turn VNAV mode ON/OFF
+
+-------------------------------------------------------------------------------
+
+-NAV(B)
+--Turn NAV mode ON/OFF
+
+-ALTITUDE(RE)
+--Turn Altitude hold mode ON/OFF => KEY_LEFT_SHIFT + KEY_LEFT_CTRL + KEY_F1 (TOGGLE AUTOPILOT ALTITUDE HOLD)
+--Increase/Decrease selected altitude => KEY_LEFT_CTRL + KEY_PAGE_UP(INCREASE AUTOPILOT REFERENCE ALTITUDE) / => KEY_LEFT_CTRL + KEY_PAGE_DOWN(DECREASE AUTOPILOT REFERENCE ALTITUDE)
+---PINS
+----CLK:2
+----DT:3
+----SW:4
+
+-LNAV(B)
+--Turn LNAV mode ON/OFF
+
+-------
+
+-FLC(RE)
+--Turn FLC mode ON/OFF => KEY_LEFT_SHIFT + KEY_LEFT_CTRL + KEY_F3(TOGGLE AUTOPILOT FLIGHT LEVEL CHANGE)
+--Increase/Decrease selected airspeed => KEY_LEFT_SHIFT + KEY_LEFT_CTRL + KEY_INSERT(INCREASE AUTOPILOT REFERENCE AIRSPEED) / => KEY_LEFT_SHIFT + KEY_LEFT_CTRL + KEY_DELETE(DECREASE AUTOPILOT REFERENCE AIRSPEED)
+---PINS
+----CLK:8
+----DT:9
+----SW:10
+
+-APPR(B)
+--Turn APPR mode ON/OFF
+
+-HEADING(RE)
+--Turn heading select ON/OFF => KEY_LEFT_SHIFT + KEY_LEFT_CTRL + KEY_F4(TOGGLE AUTOPILOT HEADING HOLD)
+--Adjust selected heading to the RIGHT/LEFT => KEY_LEFT_SHIFT + KEY_LEFT_CTRL + KEY_F5(INCREASE HEADING BUG) / => KEY_LEFT_SHIFT + KEY_LEFT_CTRL + KEY_F6(DECREASE HEADING BUG)
+---PINS
+----CLK:16
+----DT:14
+----SW:15
+
+
+-------------------------------------------------------------------------------
+
+-AP Toggle(B)
+--Engage/Disengage AP
+
+-YD(B)
+--Turn YAV damper ON/OFF
+
+-LOC(B)
+--Turn LOC mode ON/OFF
+
+-A/THR(B)
+--Turn A/THR ON/OFF
+
+-------------------------------------------------------------------------------
