@@ -110,7 +110,7 @@ public:
             Keyboard.press(_pressKeys.getKey3());
             Keyboard.press(_pressKeys.getKey4());
 
-            delay(50);
+            delay(100);
             Keyboard.release(_pressKeys.getKey4());
             Keyboard.release(_pressKeys.getKey3());
             Keyboard.release(_pressKeys.getKey2());
