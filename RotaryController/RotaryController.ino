@@ -11,10 +11,10 @@ static const KeyCombination VS_DecKeys(KEY_LEFT_CTRL, KEY_END, NULL, NULL);
 static const KeyCombination VS_PressKeys(KEY_LEFT_SHIFT, KEY_LEFT_CTRL, KEY_F2, NULL);
 static const RotationControl vs_selector = RotationControl(5, 6, 7, 150, VS_IncKeys, VS_DecKeys, VS_PressKeys);
 
-static const KeyCombination FLC_IncKeys(KEY_LEFT_SHIFT, KEY_LEFT_CTRL, KEY_INSERT, NULL);
-static const KeyCombination FLC_DecKeys(KEY_LEFT_SHIFT, KEY_LEFT_CTRL, KEY_DELETE, NULL);
+static const KeyCombination FLC_IncKeys(KEY_LEFT_CTRL, KEY_F10, NULL, NULL);
+static const KeyCombination FLC_DecKeys(KEY_LEFT_CTRL, KEY_F12, NULL, NULL);
 static const KeyCombination FLC_PressKeys(KEY_LEFT_SHIFT, KEY_LEFT_CTRL, KEY_F3, NULL);
-static const RotationControl flc_selector = RotationControl(8, 9, 10, 150, FLC_IncKeys, FLC_DecKeys, FLC_PressKeys);
+static const RotationControl flc_selector = RotationControl(8, 9, 10, 170, FLC_IncKeys, FLC_DecKeys, FLC_PressKeys);
 
 static const KeyCombination HDG_IncKeys(KEY_LEFT_SHIFT, KEY_LEFT_CTRL, KEY_F5, NULL);
 static const KeyCombination HDG_DecKeys(KEY_LEFT_SHIFT, KEY_LEFT_CTRL, KEY_F6, NULL);

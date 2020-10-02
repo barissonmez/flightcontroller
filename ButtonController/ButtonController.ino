@@ -10,6 +10,18 @@
 #define KEY_R 114
 #define KEY_Z 122
 
+/*LEDS*/
+static const LedControl FD_Led(0, CRGB::White);
+static const LedControl LOC_Led(1, CRGB::White);
+static const LedControl NAV_Led(2, CRGB::White);
+static const LedControl AP_Led(3, CRGB::Blue);
+static const LedControl APPR_Led(4, CRGB::White);
+static const LedControl YD_Led(5, CRGB::White);
+static const LedControl A_THR_Led(6, CRGB::Purple);
+static const LedControl P_BRK_Led(7, CRGB::Red);
+
+
+/*BUTTONS*/
 static const KeyCombination FD_Keys(KEY_LEFT_CTRL, KEY_F, NULL, NULL);
 static const ButtonControl FD_Btn = ButtonControl(2, FD_Keys);
 
@@ -34,18 +46,20 @@ static const ButtonControl ATHR_Btn = ButtonControl(8, ATHR_Keys);
 static const KeyCombination PBRK_Keys(KEY_P, NULL, NULL, NULL);
 static const ButtonControl PBRK_Btn = ButtonControl(9, PBRK_Keys, true);
 
+
 void setup()
 {
+  Serial.begin(9600);
 }
 
 void loop()
 {
-    FD_Btn.init();
-    NAV_Btn.init();
-    APPR_Btn.init();
-    AP_Btn.init();
-    YD_Btn.init();
-    LOC_Btn.init();
-    ATHR_Btn.init();
-    PBRK_Btn.init();
+    FD_Btn.init(FD_Led);
+    NAV_Btn.init(NAV_Led);
+    APPR_Btn.init(APPR_Led);
+    AP_Btn.init(AP_Led);
+    YD_Btn.init(YD_Led);
+    LOC_Btn.init(LOC_Led);
+    ATHR_Btn.init(A_THR_Led);
+    PBRK_Btn.init(P_BRK_Led);
 }

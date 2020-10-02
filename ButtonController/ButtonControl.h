@@ -1,7 +1,9 @@
 #include <Arduino.h>
 #include <Bounce2.h>
-#include <Keyboard.h>
 #include "KeyCombination.h"
+#include "LedController.h"
+
+static const LedController ledController;
 
 class ButtonControl
 {
@@ -10,6 +12,8 @@ private:
     KeyCombination _keys = KeyCombination(NULL, NULL, NULL, NULL);
     bool _isSwitch = false;
     int _lastSwitchValue = LOW;
+    int _buttonStateIsOn = false;
+    int _ledStateIsOn = false;
     void pressAndReleaseKeys()
     {
       Keyboard.press(_keys.getKey1());
@@ -37,9 +41,10 @@ public:
       _keys = keys;
 
       _isSwitch = isSwitch;
+
     };
 
-    void init()
+    void init(LedControl ledControl)
     {
         _button.update();
 
@@ -51,9 +56,22 @@ public:
             pressAndReleaseKeys();
             _lastSwitchValue = switchValue;
           }
+
+          if(switchValue == HIGH)
+            _ledStateIsOn = false;
+          else
+            _ledStateIsOn = true;
+            
         }else{
-          if (_button.fell())
+          if (_button.fell()){
             pressAndReleaseKeys();
+            _ledStateIsOn = !_ledStateIsOn;
+          }
         }
+
+        if(_ledStateIsOn)
+          ledController.Show(ledControl);
+        else
+          ledController.Hide(ledControl);
     };
 };
